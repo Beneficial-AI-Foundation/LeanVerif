@@ -83,12 +83,22 @@ Parser/lexer pipeline to port after core AST/type modules:
 - Keep semantics faithful; use Lean structures/inductives where it clarifies invariants.
 - Prefer computable definitions; avoid noncomputable unless strictly necessary.
 - Build modules in dependency order and keep the graph updated as the port evolves.
+- Maintain a strict module mapping: one Lean module per OCaml module, same name/behavior, under `LeanVerif/Proverif/`.
+- Mutability decision: keep core AST types pure (`Types.Mut` is a placeholder), use `IO.Ref` for module-level state; move algorithmic mutable state into explicit state records later (see `docs/mutability.md`).
+
+## Plan
+- See `docs/plan.md` for the phased port plan.
 
 ## Status (initial port)
 - ParsingHelper.extent stubbed with minimal structure.
 - Types: full `types.mli` port with `Mut` placeholders for OCaml mutable fields and function-valued placeholders.
 - Stringmap/Funsymbhash: list-based stubs.
 - Fileprint (TeX output helpers) ported to Lean IO refs.
+- StringPlus ported.
+- ParsingHelper expanded with positions, errors, and IO-backed warnings/buffers.
+- Pvqueue ported with IO.Ref-backed queue state.
+- Tree ported as a wrapper over `Lean.RBMap` (Make/MakeOne APIs).
+- Version module ported (2.05).
 - PTree (untyped/typed parse tree) ported.
 - PIPTree and PITPTree (untyped/typed pi-tree) ported.
 - PiTypes (`pitypes.mli`) ported with placeholders for function-valued fields.
