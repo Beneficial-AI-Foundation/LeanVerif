@@ -1,6 +1,6 @@
 # ProVerif Dependency Graph (2.05)
 
-Source snapshot: ProVerif 2.05 vendored at `vendor/proverif-2.05` (tarball stored as `vendor/proverif-2.05.tar.gz`).
+Source snapshot: ProVerif 2.05 vendored at `vendor/proverif-2.05` (from the official distribution tarball).
 
 How this graph was derived:
 - Run `ocamldep -one-line -I src *.ml` in `vendor/proverif-2.05/src`.
