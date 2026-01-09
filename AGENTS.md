@@ -13,7 +13,7 @@ Port ProVerif to Lean 4 — all of it. This is an opportunistic port: preserve s
 - Keep doc comments (`/-- ... -/`) on all public definitions.
 
 ## ProVerif Dependency Graph (port order)
-Computed from ProVerif 2.05 using `ocamldep` in `src/` (see `docs/proverif-deps.md` and `docs/proverif-deps.dot`).
+Computed from ProVerif 2.05 using `ocamldep` in `vendor/proverif-2.05/src` (see `docs/proverif-deps.md` and `docs/proverif-deps.dot`).
 
 Foundational interface-only modules (port first):
 - types

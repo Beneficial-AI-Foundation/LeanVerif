@@ -1,0 +1,4 @@
+examples/pi/choice/basic1.pi
+examples/pi/choice/basic2.pi
+examples/horn/secr/needham-orig.horn
+examples/horn/auth/needham.horn

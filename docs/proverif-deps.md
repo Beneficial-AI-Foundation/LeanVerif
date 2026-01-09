@@ -1,9 +1,9 @@
 # ProVerif Dependency Graph (2.05)
 
-Source snapshot: ProVerif 2.05 tarball from the official distribution site.
+Source snapshot: ProVerif 2.05 vendored at `vendor/proverif-2.05` (tarball stored as `vendor/proverif-2.05.tar.gz`).
 
 How this graph was derived:
-- Run `ocamldep -one-line -I src *.ml` in the ProVerif `src/` directory.
+- Run `ocamldep -one-line -I src *.ml` in `vendor/proverif-2.05/src`.
 - Convert `.cmi`/`.cmx` dependencies into a module DAG.
 - Topologically sort that DAG to get a port order.
 
