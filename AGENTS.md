@@ -83,3 +83,8 @@ Parser/lexer pipeline to port after core AST/type modules:
 - Keep semantics faithful; use Lean structures/inductives where it clarifies invariants.
 - Prefer computable definitions; avoid noncomputable unless strictly necessary.
 - Build modules in dependency order and keep the graph updated as the port evolves.
+
+## Status (initial port)
+- ParsingHelper.extent stubbed with minimal structure.
+- Types currently defines `nounif_value` only (needed by PTree).
+- PTree (untyped/typed parse tree) ported.

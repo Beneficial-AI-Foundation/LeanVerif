@@ -35,14 +35,14 @@ def readCases : IO (Array String) := do
   let contents ← IO.FS.readFile casesFile
   let lines := contents.splitOn "\n"
   let cases := lines.filterMap fun line =>
-    let line := line.trim
+    let line := line.trimAscii.toString
     if line.isEmpty || line.startsWith "#" then
       none
     else
       some line
   pure cases.toArray
 
-def buildProverif : IO Int := do
+def buildProverif : IO UInt32 := do
   if !(← vendorDir.pathExists) then
     IO.eprintln s!"Missing vendored ProVerif at {vendorDir}"
     return 1
@@ -59,7 +59,7 @@ def buildProverif : IO Int := do
     IO.eprintln "ProVerif build failed."
   return code
 
-def runProverif (caseFile : String) : IO (Int × String) := do
+def runProverif (caseFile : String) : IO (UInt32 × String) := do
   let result ← IO.Process.output {
     cmd := proverifExe.toString
     args := #[caseFile]
@@ -101,4 +101,4 @@ script proverifTest (args) do
         if baseline != output then
           IO.eprintln s!"Mismatch: {caseFile}"
           failed := true
-  return (if failed then 1 else 0)
+  return (if failed then (1 : UInt32) else 0)
