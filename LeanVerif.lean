@@ -3,6 +3,7 @@
 import LeanVerif.Basic
 import LeanVerif.Proverif.ParsingHelper
 import LeanVerif.Proverif.Types
+import LeanVerif.Proverif.PiTypes
 import LeanVerif.Proverif.PTree
 import LeanVerif.Proverif.PIPTree
 import LeanVerif.Proverif.PITPTree

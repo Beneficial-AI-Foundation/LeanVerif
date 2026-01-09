@@ -86,6 +86,8 @@ Parser/lexer pipeline to port after core AST/type modules:
 
 ## Status (initial port)
 - ParsingHelper.extent stubbed with minimal structure.
-- Types currently defines `nounif_value` only (needed by PTree).
+- Types: full `types.mli` port with `Mut` placeholders for OCaml mutable fields and function-valued placeholders.
+- Stringmap/Funsymbhash: list-based stubs.
 - PTree (untyped/typed parse tree) ported.
 - PIPTree and PITPTree (untyped/typed pi-tree) ported.
+- PiTypes (`pitypes.mli`) ported with placeholders for function-valued fields.
