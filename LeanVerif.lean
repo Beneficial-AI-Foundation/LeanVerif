@@ -2,6 +2,8 @@
 -- Import modules here that should be built as part of the library.
 import LeanVerif.Basic
 import LeanVerif.Proverif.Fileprint
+import LeanVerif.Proverif.Myocamlbuild
+import LeanVerif.Proverif.Addexpectedtags
 import LeanVerif.Proverif.ParsingHelper
 import LeanVerif.Proverif.StringPlus
 import LeanVerif.Proverif.Types

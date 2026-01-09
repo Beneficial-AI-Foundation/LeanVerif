@@ -99,6 +99,8 @@ Parser/lexer pipeline to port after core AST/type modules:
 - Pvqueue ported with IO.Ref-backed queue state.
 - Tree ported as a wrapper over `Lean.RBMap` (Make/MakeOne APIs).
 - Version module ported (2.05).
+- Myocamlbuild stubbed (OCamlbuild plugin is a no-op in Lean).
+- Addexpectedtags ported (tagging helper script).
 - PTree (untyped/typed parse tree) ported.
 - PIPTree and PITPTree (untyped/typed pi-tree) ported.
 - PiTypes (`pitypes.mli`) ported with placeholders for function-valued fields.
