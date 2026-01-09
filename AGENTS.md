@@ -88,6 +88,7 @@ Parser/lexer pipeline to port after core AST/type modules:
 - ParsingHelper.extent stubbed with minimal structure.
 - Types: full `types.mli` port with `Mut` placeholders for OCaml mutable fields and function-valued placeholders.
 - Stringmap/Funsymbhash: list-based stubs.
+- Fileprint (TeX output helpers) ported to Lean IO refs.
 - PTree (untyped/typed parse tree) ported.
 - PIPTree and PITPTree (untyped/typed pi-tree) ported.
 - PiTypes (`pitypes.mli`) ported with placeholders for function-valued fields.
